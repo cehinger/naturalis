@@ -89,23 +89,37 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Bonjour',
+          children: <Widget>[
+            const Center(
             ),
-            Text(
-              'Homo Sapiens'
+            Column(
+                children: const [
+                  Text(
+                      'Bonjour',
+                      style: TextStyle(
+                        fontSize: 42.0,
+                      )
+                  ),
+                  Text(
+                      'Homo Sapiens',
+                      style: TextStyle(
+                        fontSize: 36.0,
+                      )
+                  ),
+                  Text(
+                      "Bienevnue à toi si tu n'es jamais venu ici. Nos comptoirs Faune et Flore te fascinerons, je l'espère",
+                      style: TextStyle(
+                        fontSize: 24.0,
+                      )
+                  )
+                ]
             ),
-            Text(
-              "Bienvenue à toi si tu n'es jamais venu ici. Nos comptoirs Faune et Flore te fascinerons, je l'espère."
+            Column(
+              children: const [
+              ]
             ),
           ],
         ),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
