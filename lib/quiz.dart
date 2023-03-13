@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:naturalis/quiz.dart';
-import 'package:naturalis/repertoire.dart';
+import 'package:naturalis/landing.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,13 +25,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyLandingPage(title: 'Flutter Demo Home Page'),
+      home: const MyQuizPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyLandingPage extends StatefulWidget {
-  const MyLandingPage({super.key, required this.title});
+class MyQuizPage extends StatefulWidget {
+  const MyQuizPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -46,10 +45,10 @@ class MyLandingPage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyLandingPage> createState() => _MyLandingPageState();
+  State<MyQuizPage> createState() => _MyQuizPageState();
 }
 
-class _MyLandingPageState extends State<MyLandingPage> {
+class _MyQuizPageState extends State<MyQuizPage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -93,21 +92,13 @@ class _MyLandingPageState extends State<MyLandingPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Landing Page',
+              'Quiz page',
             ),
             OutlinedButton (
-              child: Text("Quiz"),
+              child: Text("Retour"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyQuizPage(title: 'quiz');
-                }));
-              },
-            ),
-            OutlinedButton (
-              child: Text("Repertoire"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyRepertoirePage(title: 'repertoire');
+                  return const MyLandingPage(title: 'home');
                 }));
               },
             ),
