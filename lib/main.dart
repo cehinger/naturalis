@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'landing.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -122,7 +124,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 TextButton (
                 child: Text("Passer"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
+                    return const MyLandingPage(title: 'home');
+                  }));
+                },
                 ),
               ]
             ),
