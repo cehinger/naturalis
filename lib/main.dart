@@ -115,7 +115,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ]
             ),
             Column(
-              children: const [
+              children: [
+                OutlinedButton (
+                  child: Text("Se Connecter"),
+                  onPressed: () { },
+                ),
+                TextButton (
+                child: Text("Passer"),
+                onPressed: () {},
+                ),
               ]
             ),
           ],
