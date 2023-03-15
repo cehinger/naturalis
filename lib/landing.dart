@@ -27,13 +27,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyLandingPage(title: 'Flutter Demo Home Page'),
+      home: const MyLandingPage(),
     );
   }
 }
 
 class MyLandingPage extends StatefulWidget {
-  const MyLandingPage({super.key, required this.title});
+  const MyLandingPage({super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -44,7 +44,6 @@ class MyLandingPage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
   final int pageIndex = 0;
 
   @override
@@ -91,7 +90,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
               child: const Text("Quiz"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyQuizPage(title: 'quiz');
+                  return const MyQuizPage();
                 }));
               },
             ),
@@ -99,7 +98,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
               child: const Text("Repertoire"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyRepertoryPage(title: 'repertoire');
+                  return const MyRepertoryPage();
                 }));
               },
             ),

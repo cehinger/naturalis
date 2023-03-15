@@ -20,10 +20,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
       switch(index) {
-        case 0: return const MyLandingPage(title: 'home'); break;
-        case 1: return const MyRepertoryPage(title: "repertoire d'espèce"); break;
-        case 2: return const MyQuizPage(title: "Quiz"); break;
-        default: return const MyLandingPage(title: 'home'); break;
+        case 0: return const MyLandingPage(); break;
+        case 1: return const MyRepertoryPage(); break;
+        case 2: return const MyQuizPage(); break;
+        default: return const MyLandingPage(); break;
       }
 
     }));
@@ -34,9 +34,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Container(
         color: Colors.black,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
           child: GNav(
-            gap: 8,
+            gap: 4,
             backgroundColor: Colors.black,
             color: Colors.white,
             activeColor: Colors.green,
@@ -47,11 +47,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
             tabs: [
               GButton(
                 icon: Icons.home,
-                text: 'Home',
+                text: 'Acceuil',
               ),
               GButton(
                   icon: Icons.dock_outlined,
-                  text: 'Species'),
+                  text: 'Repertoire'
+              ),
               GButton(
                   icon: Icons.quiz,
                   text: 'Quiz'
