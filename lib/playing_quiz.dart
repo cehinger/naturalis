@@ -1,7 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:naturalis/Widget/BottomNavigation.dart';
 import 'package:naturalis/landing.dart';
-import 'package:naturalis/playing_quiz.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,13 +27,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyQuizPage(title: 'Flutter Demo Home Page'),
+      home: const MyPlayingQuizPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyQuizPage extends StatefulWidget {
-  const MyQuizPage({super.key, required this.title});
+class MyPlayingQuizPage extends StatefulWidget {
+  const MyPlayingQuizPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -47,10 +47,20 @@ class MyQuizPage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyQuizPage> createState() => _MyQuizPageState();
+  State<MyPlayingQuizPage> createState() => _MyPlayingQuizPageState();
 }
 
-class _MyQuizPageState extends State<MyQuizPage> {
+class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
+  int _counter = 1;
+
+  void _selectQuestion() {
+
+  }
+  void _incrementCounter(){
+    setState(() {
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +71,6 @@ class _MyQuizPageState extends State<MyQuizPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -82,28 +91,42 @@ class _MyQuizPageState extends State<MyQuizPage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Quiz page',
-            ),
-            OutlinedButton (
-              child: const Text("Commencer"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyPlayingQuizPage(title: 'home');
-                }));
-              },
-            ),
-            OutlinedButton (
-              child: const Text("Retour"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyLandingPage(title: 'home');
-                }));
-              },
+            Column(
+                children: [
+                  Text(
+                      'Question n°$_counter ',
+                      style:
+                      const TextStyle
+                      (
+                        fontSize: 24.0,
+                      ),
+                  ),
+                  const Text(
+                      'Question blabla bla blablabla blabla bla bla bla',
+                      style:
+                      TextStyle
+                      (
+                        fontSize: 36.0,
+                      )
+                  ),
+                  const Text(
+                      "Veuillez cliquer sur une réponse",
+                      style:
+                      TextStyle
+                      (
+                        fontSize: 24.0,
+                      )
+                  ),
+                ]
             ),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Ajouter 1',
+        child: Icon(Icons.add),
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

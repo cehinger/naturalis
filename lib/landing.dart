@@ -52,18 +52,6 @@ class MyLandingPage extends StatefulWidget {
 }
 
 class _MyLandingPageState extends State<MyLandingPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +88,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
               'Landing Page',
             ),
             OutlinedButton (
-              child: Text("Quiz"),
+              child: const Text("Quiz"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
                   return const MyQuizPage(title: 'quiz');
@@ -108,7 +96,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
               },
             ),
             OutlinedButton (
-              child: Text("Repertoire"),
+              child: const Text("Repertoire"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
                   return const MyRepertoirePage(title: 'repertoire');
