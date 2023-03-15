@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:naturalis/Widget/BottomNavigation.dart';
 import 'package:naturalis/quiz.dart';
 import 'package:naturalis/repertoire.dart';
@@ -99,7 +98,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
               child: const Text("Repertoire"),
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyRepertoirePage(title: 'repertoire');
+                  return const MyRepertoryPage(title: 'repertoire');
                 }));
               },
             ),

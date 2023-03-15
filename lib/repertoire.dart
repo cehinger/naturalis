@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:naturalis/Widget/BottomNavigation.dart';
 import 'package:naturalis/landing.dart';
+import 'package:naturalis/playing_quiz.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,13 +27,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyRepertoirePage(title: 'Flutter Demo Home Page'),
+      home: const MyRepertoryPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyRepertoirePage extends StatefulWidget {
-  const MyRepertoirePage({super.key, required this.title});
+class MyRepertoryPage extends StatefulWidget {
+  const MyRepertoryPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -46,10 +47,10 @@ class MyRepertoirePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyRepertoirePage> createState() => _MyRepertoirePageState();
+  State<MyRepertoryPage> createState() => _MyRepertoryPageState();
 }
 
-class _MyRepertoirePageState extends State<MyRepertoirePage> {
+class _MyRepertoryPageState extends State<MyRepertoryPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +83,9 @@ class _MyRepertoirePageState extends State<MyRepertoirePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Repertoire Page',
+              'Repertoire page',
             ),
+
             OutlinedButton (
               child: const Text("Retour"),
               onPressed: () {
