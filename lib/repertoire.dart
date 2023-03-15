@@ -61,7 +61,7 @@ class _MyRepertoryPageState extends State<MyRepertoryPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(pageIndex: 1),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
