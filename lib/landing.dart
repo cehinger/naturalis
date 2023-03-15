@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:naturalis/Widget/BottomNavigation.dart';
 import 'package:naturalis/quiz.dart';
 import 'package:naturalis/repertoire.dart';
 
@@ -72,6 +74,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      bottomNavigationBar: BottomNavigation(),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -91,6 +94,7 @@ class _MyLandingPageState extends State<MyLandingPage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
+
           children: <Widget>[
             const Text(
               'Landing Page',
