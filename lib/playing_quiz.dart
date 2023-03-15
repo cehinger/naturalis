@@ -128,16 +128,64 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                         fontSize: 24.0,
                       )
                   ),
+                  const SizedBox(height: 20),
                 ]
             ),
-          ],
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const SizedBox(width: 20),
+                    Expanded(
+                      flex: 1,
+                      child:
+                        OutlinedButton (
+                          onPressed: _incrementCounter,
+                          //TODO Rempalcer le texte par la variable réponse A
+                          child: const Text("Réponse A"),
+                        )
+                    ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                        flex: 1,
+                        child:
+                        OutlinedButton (
+                          onPressed: _incrementCounter,
+                          //TODO Rempalcer le texte par la variable réponse B
+                          child: const Text("Réponse B"),
+                        ),
+                    ),
+                    const SizedBox(width: 20),
+                  ]),
+                ]),
+                Row(
+                    children: [
+                      const SizedBox(width: 20),
+                      Expanded(
+                          flex: 1,
+                          child:
+                          OutlinedButton (
+                            onPressed: _incrementCounter,
+                            //TODO Rempalcer le texte par la variable réponse C
+                            child: const Text("Réponse C"),
+                          )
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                          flex: 1,
+                          child:
+                          OutlinedButton (
+                            onPressed: _incrementCounter,
+                            //TODO Rempalcer le texte par la variable réponse D
+                            child: const Text("Réponse D"),
+                          )
+                      ),
+                      const SizedBox(width: 20),
+                    ],
+                ),
+              ],
+            ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Ajouter 1',
-        child: const Icon(Icons.add),
-      ),// This trailing comma makes auto-formatting nicer for build methods.
-    );
+      );
   }
 }
