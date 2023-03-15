@@ -101,6 +101,14 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                         fontSize: 24.0,
                       ),
                   ),
+                  const SizedBox(height: 20),
+                  Image.network(
+                    'https://instagram.flyn1-1.fna.fbcdn.net/v/t51.2885-15/332092757_873223033968789_8810941222458115789_n.webp?stp=dst-jpg_e35_p320x320&_nc_ht=instagram.flyn1-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=5YS0II72N4sAX8CEm3q&edm=AGenrX8BAAAA&ccb=7-5&oh=00_AfBYRe1hubqxbJJGvFxku4Q2eXcjgw1ZRgJGfGudX_dfPg&oe=6416BA38&_nc_sid=5eceaa',
+                    width: 200, // specify the width of the image
+                    height: 200, // specify the height of the image
+                    fit: BoxFit.cover, // specify the scaling behavior of the image
+                  ),
+                  const SizedBox(height: 20),
                   const Text(
                       'Question blabla bla blablabla blabla bla bla bla',
                       style:
@@ -109,6 +117,7 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                         fontSize: 36.0,
                       )
                   ),
+                  const SizedBox(height: 20),
                   const Text(
                       "Veuillez cliquer sur une réponse",
                       style:
@@ -125,7 +134,7 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Ajouter 1',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
