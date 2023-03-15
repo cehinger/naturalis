@@ -99,7 +99,7 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                       style:
                       const TextStyle
                       (
-                        fontSize: 24.0,
+                        fontSize: 20.0,
                       ),
                   ),
                   const SizedBox(height: 20),
@@ -113,15 +113,6 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                   const SizedBox(height: 20),
                   const Text(
                       'Question blabla bla blablabla blabla bla bla bla',
-                      style:
-                      TextStyle
-                      (
-                        fontSize: 36.0,
-                      )
-                  ),
-                  const SizedBox(height: 20),
-                  const Text(
-                      "Veuillez cliquer sur une réponse",
                       style:
                       TextStyle
                       (
@@ -146,18 +137,8 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                         )
                     ),
                     const SizedBox(width: 20),
-                    Expanded(
-                        flex: 1,
-                        child:
-                        OutlinedButton (
-                          onPressed: _incrementCounter,
-                          //TODO Rempalcer le texte par la variable réponse B
-                          child: const Text("Réponse B"),
-                        ),
-                    ),
-                    const SizedBox(width: 20),
-                  ]),
-                ]),
+                  ]
+                ),
                 Row(
                     children: [
                       const SizedBox(width: 20),
@@ -166,23 +147,44 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                           child:
                           OutlinedButton (
                             onPressed: _incrementCounter,
-                            //TODO Rempalcer le texte par la variable réponse C
-                            child: const Text("Réponse C"),
+                            //TODO Rempalcer le texte par la variable réponse A
+                            child: const Text("Réponse A"),
                           )
                       ),
+                      const SizedBox(width: 20),
+                    ]
+                ),
+                Row(
+                    children: [
                       const SizedBox(width: 20),
                       Expanded(
                           flex: 1,
                           child:
                           OutlinedButton (
                             onPressed: _incrementCounter,
-                            //TODO Rempalcer le texte par la variable réponse D
-                            child: const Text("Réponse D"),
+                            //TODO Rempalcer le texte par la variable réponse A
+                            child: const Text("Réponse A"),
                           )
                       ),
                       const SizedBox(width: 20),
-                    ],
+                    ]
                 ),
+                Row(
+                    children: [
+                      const SizedBox(width: 20),
+                      Expanded(
+                          flex: 1,
+                          child:
+                          OutlinedButton (
+                            onPressed: _incrementCounter,
+                            //TODO Rempalcer le texte par la variable réponse A
+                            child: const Text("Réponse A"),
+                          )
+                      ),
+                      const SizedBox(width: 20),
+                    ]
+                ),
+                ]),
               ],
             ),
         ),
