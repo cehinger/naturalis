@@ -70,8 +70,14 @@ class _MyQuizPageState extends State<MyQuizPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Sélectionner un thème',
+              'Merci de sélectionner un theme de quiz :',
+              style:
+              TextStyle
+                (
+                fontSize: 20.0,
+              ),
             ),
+            const SizedBox(height: 40),
             Column(
                 children: [
                   Row(
