@@ -89,7 +89,14 @@ class _MyQuizPageState extends State<MyQuizPage> {
                             OutlinedButton (
                               onPressed: (){},
                               child: const Text("Insectes"),
-                            )
+                            ),
+
+                        ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/717/193/png-clipart-insect-a-dragonfly-a-dazzle-of-dragonflies-emperor-insect-insect-dragonfly.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
                         ),
                         const SizedBox(width: 20),
                         Expanded(
@@ -99,6 +106,12 @@ class _MyQuizPageState extends State<MyQuizPage> {
                               onPressed: (){},
                               child: const Text("Arthropodes"),
                             )
+                        ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/387/118/png-clipart-brush-footed-butterflies-butterfly-gossamer-winged-butterflies-insect-arthropod-butterfly-brush-footed-butterfly-insects.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
                         ),
                         const SizedBox(width: 20),
                       ]
@@ -115,6 +128,12 @@ class _MyQuizPageState extends State<MyQuizPage> {
                               child: const Text("Crustacé"),
                             )
                         ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/701/639/png-clipart-snow-crab-crustacean-orangutan-crab-food-animals.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
+                        ),
                         const SizedBox(width: 20),
                         Expanded(
                             flex: 1,
@@ -123,6 +142,12 @@ class _MyQuizPageState extends State<MyQuizPage> {
                               onPressed: (){},
                               child: const Text("Chélicérés"),
                             )
+                        ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/263/425/png-clipart-scorpion-insect-sticker-black-scorpion-food-black-hair.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
                         ),
                         const SizedBox(width: 20),
                       ]
@@ -139,6 +164,12 @@ class _MyQuizPageState extends State<MyQuizPage> {
                               child: const Text("Hexapodes"),
                             )
                         ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/300/592/png-clipart-hercules-beetle-rhinoceros-beetles-graphy-beetle-food-animals.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
+                        ),
                         const SizedBox(width: 20),
                         Expanded(
                             flex: 1,
@@ -147,6 +178,12 @@ class _MyQuizPageState extends State<MyQuizPage> {
                               onPressed: (){},
                               child: const Text("Champignons"),
                             )
+                        ),
+                        Image.network(
+                          'https://e7.pngegg.com/pngimages/321/442/png-clipart-poisonous-mushroom-fungus-amanita-muscaria-mushroom-poisoning-mushroom-грибы-шиитаке-грибы.png',
+                          width: 50, // specify the width of the image
+                          height: 50, // specify the height of the image
+                          fit: BoxFit.cover, // specify the scaling behavior of the image
                         ),
                         const SizedBox(width: 20),
                       ]
