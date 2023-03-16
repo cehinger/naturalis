@@ -38,19 +38,8 @@ class _MyRepertoryPageState extends State<MyRepertoryPage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Repertoire page',
-            ),
-
-            OutlinedButton (
-              child: const Text("Retour"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyLandingPage();
-                }));
-              },
-            ),
+          children: const <Widget>[
+            Text('Repertoire page'),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
