@@ -70,24 +70,82 @@ class _MyQuizPageState extends State<MyQuizPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Quiz page',
+              'Sélectionner un thème',
             ),
-            OutlinedButton (
-              child: const Text("Commencer"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyPlayingQuizPage(title: 'home');
-                }));
-              },
-            ),
-            OutlinedButton (
-              child: const Text("Retour"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyLandingPage();
-                }));
-              },
-            ),
+            Column(
+                children: [
+                  Row(
+                      children: [
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Insectes"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Arthropodes"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                      ]
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                      children: [
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Crustacé"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Chélicérés"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                      ]
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                      children: [
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Hexapodes"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                        Expanded(
+                            flex: 1,
+                            child:
+                            OutlinedButton (
+                              onPressed: (){},
+                              child: const Text("Champignons"),
+                            )
+                        ),
+                        const SizedBox(width: 20),
+                      ]
+                  ),
+                ]),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
