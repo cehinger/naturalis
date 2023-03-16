@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:naturalis/Widget/BottomNavigation.dart';
 import 'package:naturalis/quiz.dart';
 import 'package:naturalis/repertoire.dart';
 
@@ -61,7 +60,6 @@ class _MyLandingPageState extends State<MyLandingPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(pageIndex: 0),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
