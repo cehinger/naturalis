@@ -17,7 +17,7 @@ class _LayoutState extends State<Layout> {
   @override
   void initState() {
     super.initState();
-    _myPage = PageController(initialPage: 1);
+    _myPage = PageController(initialPage: 0);
     selectedPage = 0;
   }
   void navigateToTab(int index) {
