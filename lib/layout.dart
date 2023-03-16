@@ -12,31 +12,32 @@ class Layout extends StatefulWidget {
 
 class _LayoutState extends State<Layout> {
   late PageController _myPage;
-  var selectedPage;
+  var _selectedPage;
 
   @override
   void initState() {
     super.initState();
     _myPage = PageController(initialPage: 0);
-    selectedPage = 0;
+    _selectedPage = 0;
   }
-  void navigateToTab(int index) {
+  void navigateToPage(int index) {
     _myPage.jumpToPage(index);
     setState(() {
-      selectedPage = index;
+      _selectedPage = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
         body: PageView(
           physics: const NeverScrollableScrollPhysics(),
           controller: _myPage,
-          children: const <Widget>[
-            Center(child: MyLandingPage()),
-            Center(child: MyQuizPage()),
-            Center(child: MyRepertoryPage()),
+          children: <Widget>[
+            Center(child: MyLandingPage(redirectionFunction: navigateToPage)),
+            const Center(child: MyQuizPage()),
+            const Center(child: MyRepertoryPage()),
           ],
         ),
         bottomNavigationBar: Container(
@@ -47,10 +48,10 @@ class _LayoutState extends State<Layout> {
               gap: 4,
               backgroundColor: Colors.black,
               color: Colors.white,
-              activeColor: Colors.green,
-              selectedIndex: selectedPage,
+              activeColor: Colors.orange,
+              selectedIndex: _selectedPage,
               onTabChange: (index) {
-                navigateToTab(index);
+                navigateToPage(index);
               },
               tabs: const [
                 GButton(

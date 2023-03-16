@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:naturalis/login.dart';
 
 void main() => runApp(MyApp());
@@ -10,8 +11,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Roboto',
+        colorScheme: const ColorScheme(
+            background: Colors.black87,
+            brightness: Brightness.dark,
+            primary: Colors.orange,
+            onPrimary: Colors.deepOrange,
+            secondary: Colors.white,
+            onSecondary: Colors.white60,
+            error: Colors.red,
+            onError: Colors.red,
+            onBackground: Colors.purple,
+            surface: Colors.yellow,
+            onSurface: Colors.blue),
+      ),
       title: _title,
       home: App(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -1,55 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:naturalis/quiz.dart';
-import 'package:naturalis/repertoire.dart';
+import 'package:naturalis/Widget/MyCard.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+class MyLandingPage extends StatelessWidget {
+  final Function(int val) redirectionFunction;
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyLandingPage(),
-    );
-  }
-}
-
-class MyLandingPage extends StatefulWidget {
-  const MyLandingPage({super.key});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final int pageIndex = 0;
-
-  @override
-  State<MyLandingPage> createState() => _MyLandingPageState();
-}
-
-class _MyLandingPageState extends State<MyLandingPage> {
+  const MyLandingPage({
+    super.key,
+    required this.redirectionFunction,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,49 +18,53 @@ class _MyLandingPageState extends State<MyLandingPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-
-          children: <Widget>[
-            const Text(
-              'Landing Page',
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const <Widget>[
+                  Text("Naturalis",
+                      style: TextStyle(
+                        fontSize: 35,
+                      )
+                  ),
+                  Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+                ],
+              ),
             ),
-            OutlinedButton (
-              child: const Text("Quiz"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyQuizPage();
-                }));
-              },
-            ),
-            OutlinedButton (
-              child: const Text("Repertoire"),
-              onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
-                  return const MyRepertoryPage();
-                }));
-              },
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                InkWell(
+                  onTap: () {redirectionFunction(1);},
+                  child: const MyCard(
+                    label: "Quiz",
+                    sublabel: "(24 quizzes)",
+                  ),
+                ),
+                InkWell(
+                  onTap: () {redirectionFunction(2);},
+                  child: const MyCard(
+                    label: "Répertoire d'éspèces",
+                    sublabel: "(150 éspèces)",
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
 }
+
+
+
+
