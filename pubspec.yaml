@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_nav_bar: ^5.0.6
   google_fonts: ^2.1.0
+  flutter_svg: ^2.0.4
 
 dev_dependencies:
   flutter_test:
@@ -54,7 +55,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/images/quizCard.svg
+    - assets/images/repertoryCard.svg
+    - assets/images/naturalisLogo.png
+    - assets/images/fernsRight.png
+    - assets/images/fernsLeft.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -79,8 +85,8 @@ flutter:
   fonts:
      - family: Roboto
        fonts:
-         - asset: fonts/Roboto-Regular.ttf
-         - asset: fonts/Roboto-Italic.ttf
+         - asset: assets/fonts/Roboto-Regular.ttf
+         - asset: assets/fonts/Roboto-Italic.ttf
            style: italic
 
   # For details regarding fonts from package dependencies,

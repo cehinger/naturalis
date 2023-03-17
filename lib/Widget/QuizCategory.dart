@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
-class MyCard extends StatefulWidget {
-  const MyCard({
+class QuizCategory extends StatefulWidget {
+  const QuizCategory({
     super.key,
     required this.label,
     required this.sublabel,
@@ -14,25 +15,23 @@ class MyCard extends StatefulWidget {
   final String assetImage;
 
   @override
-  State<MyCard> createState() => _MyCardState();
+  State<QuizCategory> createState() => _QuizCategoryState();
 
-  void onTap() {
-
-  }
 }
 
-class _MyCardState extends State<MyCard> {
+class _QuizCategoryState extends State<QuizCategory> {
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: BoxDecoration(
       boxShadow: [
         BoxShadow(
           color: Colors.black.withOpacity(0.5),
           spreadRadius: 10,
           blurRadius: 50,
-          offset: Offset(5, 10), // changes position of shadow
+          offset: const Offset(5, 10), // changes position of shadow
         ),
       ],
     ),
@@ -46,7 +45,7 @@ class _MyCardState extends State<MyCard> {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Column(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -55,10 +54,9 @@ class _MyCardState extends State<MyCard> {
                   Column(
                     children: [
                       Text(
-                        widget.label.toUpperCase(),
+                        widget.label,
                         style: const TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
                             color: Colors.orange
                         ),
                       ),

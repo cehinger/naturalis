@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:naturalis/landing.dart';
+import 'package:naturalis/login.dart';
 import 'package:naturalis/quiz.dart';
 import 'package:naturalis/repertoire.dart';
 
@@ -41,7 +42,11 @@ class _LayoutState extends State<Layout> {
           ],
         ),
         bottomNavigationBar: Container(
-          color: Colors.black,
+            decoration: const BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 2.0, color: Colors.orange),
+              ),
+            ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
             child: GNav(
@@ -63,7 +68,7 @@ class _LayoutState extends State<Layout> {
                     text: 'Quiz'
                 ),
                 GButton(
-                    icon: Icons.dock_outlined,
+                    icon: Icons.grid_view_outlined,
                     text: 'Repertoire'
                 ),
               ],

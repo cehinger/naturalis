@@ -11,74 +11,82 @@ class MyLoginPage extends StatefulWidget {
 }
 
 class _MyLoginPageState extends State<MyLoginPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Center(
-            ),
-            Column(
-                children: const [
-                  Text(
-                      'Bonjour',
-                      style: TextStyle(
-                        fontSize: 42.0,
-                      )
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Stack(children: [
+                Positioned(
+                    left: -150,
+                    top: -120,
+                    child: Image.asset("assets/images/fernsLeft.png")),
+                Positioned(
+                    right: -200,
+                    top: -150,
+                    child: Image.asset("assets/images/fernsRight.png")),
+                Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/naturalisLogo.png"),
+                      Container(
+                        margin: const EdgeInsets.only(top: 30.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text('Bonjour,',
+                                style: TextStyle(
+                                  fontSize: 42.0,
+                                )),
+                            Text('Homo Sapiens²',
+                                style: TextStyle(
+                                  fontSize: 36.0,
+                                )),
+                            Text(
+                              "Bienvenue à toi si tu n'es jamais venu ici. Nos comptoirs et Quiz sur la Faune et Flore te fascineront, je l'espère...",
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.white54,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  Text(
-                      'Homo Sapiens',
-                      style: TextStyle(
-                        fontSize: 36.0,
-                      )
+                ),
+              ]),
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: Column(children: [
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(40),
+                      side: const BorderSide(width: 2.0, color: Colors.orange),
+                    ),
+                    onPressed: () {},
+                    child: const Text("SE CONNECTER"),
                   ),
-                  Text(
-                      "Bienevnue à toi si tu n'es jamais venu ici. Nos comptoirs Faune et Flore te fascinerons, je l'espère",
-                      style: TextStyle(
-                        fontSize: 24.0,
-                      )
-                  )
-                ]
-            ),
-            Column(
-                children: [
-                  OutlinedButton (
-                    child: const Text("Se Connecter"),
-                    onPressed: () { },
-                  ),
-                  TextButton (
+                  TextButton(
                     child: const Text("Passer"),
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context){
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (BuildContext context) {
                         return const Layout();
                       }));
                     },
                   ),
-                ]
-            ),
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+                ]),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
