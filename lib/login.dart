@@ -40,17 +40,17 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           children: const [
                             Text('Bonjour,',
                                 style: TextStyle(
-                                  fontSize: 42.0,
+                                  fontSize: 40.0,
                                 )),
                             Text('Homo Sapiens²',
                                 style: TextStyle(
-                                  fontSize: 36.0,
+                                  fontSize: 28.0,
                                 )),
                             Text(
                               "Bienvenue à toi si tu n'es jamais venu ici. Nos comptoirs et Quiz sur la Faune et Flore te fascineront, je l'espère...",
                               textAlign: TextAlign.start,
                               style: TextStyle(
-                                fontSize: 18.0,
+                                fontSize: 16.0,
                                 color: Colors.white54,
                               ),
                             ),

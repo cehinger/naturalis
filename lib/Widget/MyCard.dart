@@ -55,9 +55,9 @@ class _MyCardState extends State<MyCard> {
                   Column(
                     children: [
                       Text(
-                        widget.label.toUpperCase(),
+                        widget.label,
                         style: const TextStyle(
-                            fontSize: 25,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.orange
                         ),
