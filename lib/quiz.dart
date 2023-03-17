@@ -58,9 +58,9 @@ class _MyQuizPageState extends State<MyQuizPage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: const <Widget>[
-                    QuizCategory(label: 'Insectes', sublabel: '', assetImage: ''),
-                    QuizCategory(label: 'Champignons', sublabel: '', assetImage: ''),
-                    QuizCategory(label: 'Plantes', sublabel: '', assetImage: ''),
+                    QuizCategory(label: 'Insectes', sublabel: "(8 quizzes)", assetImage: 'assets/images/beetle.svg'),
+                    QuizCategory(label: 'Champignons', sublabel: "(8 quizzes)", assetImage: 'assets/images/fungus.svg'),
+                    QuizCategory(label: 'Plantes', sublabel: "(8 quizzes)", assetImage: 'assets/images/plant.svg'),
                   ],
                 ),
               ),

@@ -58,6 +58,9 @@ flutter:
   assets:
     - assets/images/quizCard.svg
     - assets/images/repertoryCard.svg
+    - assets/images/beetle.svg
+    - assets/images/plant.svg
+    - assets/images/fungus.svg
     - assets/images/naturalisLogo.png
     - assets/images/fernsRight.png
     - assets/images/fernsLeft.png

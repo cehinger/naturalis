@@ -46,18 +46,19 @@ class _QuizCategoryState extends State<QuizCategory> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset(widget.assetImage),
-                  const SizedBox(height: 10),
-                  Column(
+                  SizedBox(
+                      width: 40,
+                      child: SvgPicture.asset(widget.assetImage)
+                  ),
+                  Row(
                     children: [
                       Text(
                         widget.label,
                         style: const TextStyle(
-                            fontSize: 20,
-                            color: Colors.orange
+                            fontSize: 18,
                         ),
                       ),
                       Text(
