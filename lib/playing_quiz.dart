@@ -21,6 +21,7 @@ class MyPlayingQuizPage extends StatefulWidget {
 
 class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
   int _counter = 1;
+  int _selectedQuizId = 0;
 
   void _selectQuestion() {
 
@@ -30,6 +31,43 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
       _counter++;
     });
   }
+
+  int getQuizId(){
+    int idQuiz = 0;
+    switch(widget.title) {
+      case "Insectes": {
+        idQuiz=1;
+      }
+      break;
+
+      case "Champignons": {
+        idQuiz=2;
+      }
+      break;
+
+      case "Plantes": {
+        idQuiz=3;
+      }
+      break;
+
+      default: {
+        idQuiz = 0;
+      }
+      break;
+    }
+    return idQuiz;
+  }
+
+  @override
+  void initState(){
+    super.initState();
+
+    setState(() {
+      _selectedQuizId = getQuizId();
+    });
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
