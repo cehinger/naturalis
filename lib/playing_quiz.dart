@@ -73,7 +73,7 @@ class _MyPlayingQuizPageState extends State<MyPlayingQuizPage> {
                   const SizedBox(height: 20),
                   const SizedBox(height: 20),
                   const Text(
-                      'Question blabla bla blablabla blabla bla bla bla',
+                      'Titre de la question',
                       style:
                       TextStyle
                       (

@@ -25,15 +25,15 @@ class _MyQuizPageState extends State<MyQuizPage> {
           children: <Widget>[
             InkWell(
                 onTap: () { handleSelectQuiz("QUIZ_INSECTA");},
-                child: QuizCategory(label: 'Insectes', sublabel: "(8 quizzes)", assetImage: 'assets/images/beetle.svg')
+                child: QuizCategory(label: 'Insectes', sublabel: "(Insecta)", assetImage: 'assets/images/beetle.svg')
             ),
             InkWell(
                 onTap: () { handleSelectQuiz("QUIZ_FUNGI");},
-                child: QuizCategory(label: 'Champignons', sublabel: "(8 quizzes)", assetImage: 'assets/images/fungus.svg')
+                child: QuizCategory(label: 'Champignons', sublabel: "(Fungi)", assetImage: 'assets/images/fungus.svg')
             ),
             InkWell(
                 onTap: () { handleSelectQuiz("QUIZ_PLANTAE");},
-                child: QuizCategory(label: 'Plantes', sublabel: "(8 quizzes)", assetImage: 'assets/images/plant.svg')
+                child: QuizCategory(label: 'Plantes', sublabel: "(Plantae)", assetImage: 'assets/images/plant.svg')
             ),
           ],
         ),
