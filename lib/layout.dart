@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:naturalis/landing.dart';
 import 'package:naturalis/login.dart';
+import 'package:naturalis/playing_quiz.dart';
 import 'package:naturalis/quiz.dart';
 import 'package:naturalis/repertoire.dart';
 
@@ -39,6 +40,7 @@ class _LayoutState extends State<Layout> {
             Center(child: MyLandingPage(redirectionFunction: navigateToPage)),
             const Center(child: MyQuizPage()),
             const Center(child: MyRepertoryPage()),
+            //Not nav
           ],
         ),
         bottomNavigationBar: Container(

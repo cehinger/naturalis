@@ -6,11 +6,28 @@ class MyLoginPage extends StatefulWidget {
 
   final int pageIndex = 0;
 
+
+
+
+
   @override
   State<MyLoginPage> createState() => _MyLoginPageState();
+
+
+
 }
 
 class _MyLoginPageState extends State<MyLoginPage> {
+
+  Layout? goToLayout(BuildContext context) {
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(
+            builder: (BuildContext context) {return const Layout();}
+        ));
+    return null;
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,16 +86,15 @@ class _MyLoginPageState extends State<MyLoginPage> {
                       minimumSize: const Size.fromHeight(40),
                       side: const BorderSide(width: 2.0, color: Colors.orange),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      goToLayout(context);
+                    },
                     child: const Text("SE CONNECTER"),
                   ),
                   TextButton(
                     child: const Text("Passer"),
                     onPressed: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (BuildContext context) {
-                        return const Layout();
-                      }));
+                      goToLayout(context);
                     },
                   ),
                 ]),

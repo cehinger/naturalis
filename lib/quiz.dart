@@ -13,6 +13,50 @@ class MyQuizPage extends StatefulWidget {
 }
 
 class _MyQuizPageState extends State<MyQuizPage> {
+
+  String _mode = "SELECTION";
+
+  Widget quizSelection() {
+    return Flexible(
+      flex: 1,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            InkWell(
+                onTap: () { handleSelectQuiz("QUIZ_INSECTA");},
+                child: QuizCategory(label: 'Insectes', sublabel: "(8 quizzes)", assetImage: 'assets/images/beetle.svg')
+            ),
+            InkWell(
+                onTap: () { handleSelectQuiz("QUIZ_FUNGI");},
+                child: QuizCategory(label: 'Champignons', sublabel: "(8 quizzes)", assetImage: 'assets/images/fungus.svg')
+            ),
+            InkWell(
+                onTap: () { handleSelectQuiz("QUIZ_PLANTAE");},
+                child: QuizCategory(label: 'Plantes', sublabel: "(8 quizzes)", assetImage: 'assets/images/plant.svg')
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget switchWidget(String mode){
+    switch (mode) {
+      case 'SELECTION': return quizSelection();
+      case 'QUIZ_INSECTA': return const MyPlayingQuizPage(title: "Insectes");
+      case 'QUIZ_FUNGI': return const MyPlayingQuizPage(title: "Champignons");
+      case 'QUIZ_PLANTAE': return const MyPlayingQuizPage(title: "Plantes");
+      default : return quizSelection();
+    }
+  }
+
+  void handleSelectQuiz(String context) {
+      setState(() {
+        _mode = context;
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,19 +67,7 @@ class _MyQuizPageState extends State<MyQuizPage> {
               title: "Quizzes sur la Nature",
               description: "description",
             ),
-            Flexible(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: const <Widget>[
-                    QuizCategory(label: 'Insectes', sublabel: "(8 quizzes)", assetImage: 'assets/images/beetle.svg'),
-                    QuizCategory(label: 'Champignons', sublabel: "(8 quizzes)", assetImage: 'assets/images/fungus.svg'),
-                    QuizCategory(label: 'Plantes', sublabel: "(8 quizzes)", assetImage: 'assets/images/plant.svg'),
-                  ],
-                ),
-              ),
-            ),
+            switchWidget(_mode),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
