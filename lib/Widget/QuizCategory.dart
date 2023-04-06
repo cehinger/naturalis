@@ -49,9 +49,16 @@ class _QuizCategoryState extends State<QuizCategory> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
                   SizedBox(
-                      width: 40,
+                      width: 60,
+                      height: 60,
                       child: SvgPicture.asset(widget.assetImage)
+                  ),
+                  const SizedBox(
+                    width: 20,
                   ),
                   Row(
                     children: [
@@ -60,6 +67,9 @@ class _QuizCategoryState extends State<QuizCategory> {
                         style: const TextStyle(
                             fontSize: 18,
                         ),
+                      ),
+                      const SizedBox(
+                        width: 10,
                       ),
                       Text(
                         widget.sublabel,
