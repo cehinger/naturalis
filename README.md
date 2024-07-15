@@ -1,6 +1,10 @@
-# naturalis
+# NATURALIS
 
 Naturalis Flutter Application
+
+## PURPOSE
+
+Naturalis is en application to learn about plants, flowers, animal and bugs
 
 ## Getting Started
 
